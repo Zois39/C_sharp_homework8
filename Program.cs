@@ -116,7 +116,7 @@ Console.Write(FindRowMinSum(newArray));
 // Результирующая матрица будет:
 // 18 20
 // 15 18
-
+/*
 int[,] CreateRandom2DArray (int m, int n)
 {
     int[,] array = new int [m, n];
@@ -128,18 +128,34 @@ int[,] CreateRandom2DArray (int m, int n)
 
 int[,] MatrixProduct (int[,] arrA, int[,] arrB)
 {
-    int[,] result = new int [arrA.GetLength(0), arrB.GetLength(1)];
-    for (int i = 0; i < arrA.GetLength(0); i++)
-        for (int j = 0; j < arrB.GetLength(0); j++)
-            result[i, j] = 
+    int[,] result = new int [arrA.GetLength(1), arrB.GetLength(0)];
+    for (int i = 0; i < result.GetLength(1); i++)
+        for (int j = 0; j < result.GetLength(0); j++)
+            for (int k = 0; k < result.GetLength(1); k++)
+                result[i, j] += arrA[i, k] * arrB [k, j];
+    return result;
 }
 
+void Show2DArray (int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + " ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
 
 int m = new Random().Next(5);
 int n = new Random().Next(5);
 int[,] matrixA= CreateRandom2DArray(m, n);
 int[,] matrixB = CreateRandom2DArray(n, m);
 
+Show2DArray(matrixA);
+Show2DArray(matrixB);
+Show2DArray(MatrixProduct(matrixA, matrixB));
+*/
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет
 // построчно выводить массив, добавляя индексы каждого элемента.

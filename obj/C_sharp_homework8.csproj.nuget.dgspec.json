@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Пользователь\\Desktop\\C_sharp_homework\\C_sharp_homework8\\C_sharp_homework8.csproj": {}
+    "C:\\Programmings\\hw8\\C_sharp_homework8\\C_sharp_homework8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Пользователь\\Desktop\\C_sharp_homework\\C_sharp_homework8\\C_sharp_homework8.csproj": {
+    "C:\\Programmings\\hw8\\C_sharp_homework8\\C_sharp_homework8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Пользователь\\Desktop\\C_sharp_homework\\C_sharp_homework8\\C_sharp_homework8.csproj",
+        "projectUniqueName": "C:\\Programmings\\hw8\\C_sharp_homework8\\C_sharp_homework8.csproj",
         "projectName": "C_sharp_homework8",
-        "projectPath": "C:\\Users\\Пользователь\\Desktop\\C_sharp_homework\\C_sharp_homework8\\C_sharp_homework8.csproj",
-        "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Пользователь\\Desktop\\C_sharp_homework\\C_sharp_homework8\\obj\\",
+        "projectPath": "C:\\Programmings\\hw8\\C_sharp_homework8\\C_sharp_homework8.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Programmings\\hw8\\C_sharp_homework8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Пользователь\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
