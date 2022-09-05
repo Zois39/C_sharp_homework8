@@ -61,6 +61,50 @@ Show2DArray(SortRows2DArray(newArray));
 
 // 5 2 6 7
 
+int[,] CreateRandom2DArray ()
+{
+    int[,] array = new int [new Random().Next(10), new Random().Next(10)];
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            array[i, j] = new Random().Next(10);
+    return array;
+}
+
+int FindRowMinSum (int[,] array)
+{
+    int result = 0;
+    int sumMin = 0;
+    int sumCurr = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            sumCurr += array[i, j];
+        if (sumCurr < sumMin)
+        {
+            sumMin = sumCurr;
+            result = i;
+        }
+    }
+    return result;
+}
+
+void Show2DArray (int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + " ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int[,] newArray = CreateRandom2DArray();
+Show2DArray(newArray);
+Console.Write(FindRowMinSum(newArray));
+
+
+
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
@@ -70,6 +114,10 @@ Show2DArray(SortRows2DArray(newArray));
 // Результирующая матрица будет:
 // 18 20
 // 15 18
+
+
+
+
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 // Массив размером 2 x 2 x 2
