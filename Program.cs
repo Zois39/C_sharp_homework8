@@ -61,6 +61,7 @@ Show2DArray(SortRows2DArray(newArray));
 
 // 5 2 6 7
 
+/*
 int[,] CreateRandom2DArray ()
 {
     int[,] array = new int [new Random().Next(10), new Random().Next(10)];
@@ -75,7 +76,9 @@ int FindRowMinSum (int[,] array)
     int result = 0;
     int sumMin = 0;
     int sumCurr = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int j = 0; j < array.GetLength(1); j++)
+        sumMin += array[0, j];
+    for (int i = 1; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
             sumCurr += array[i, j];
@@ -84,6 +87,7 @@ int FindRowMinSum (int[,] array)
             sumMin = sumCurr;
             result = i;
         }
+        sumCurr = 0;
     }
     return result;
 }
@@ -102,7 +106,7 @@ void Show2DArray (int[,] array)
 int[,] newArray = CreateRandom2DArray();
 Show2DArray(newArray);
 Console.Write(FindRowMinSum(newArray));
-
+*/
 
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
