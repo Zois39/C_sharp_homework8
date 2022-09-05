@@ -203,3 +203,55 @@ Show3DArray(CreateRandom3DArray());
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+void SpiralArray(int[,] arr, int i, int j, int k)
+{
+    if (arr[i, j] == 0)
+      arr[i, j] = k;
+      k++;
+    if (j - 1 > 0)
+        if (arr[i, j - 1] == k - 1)
+            if (j + 1 < arr.GetLength(1))
+                if (arr[i, j + 1] == 0)
+                    SpiralArray(arr, i, j + 1, k);
+                else if (arr[i + 1, j] == 0)
+                    SpiralArray(arr, i + 1, j, k);
+    if (i - 1 > 0)
+        if (arr[i - 1, j] == k - 1)
+            if (i + 1 < arr.GetLength(0))
+                if (arr[i + 1, j] == 0)
+                    SpiralArray(arr, i + 1, j, k);
+                else if (arr[i, j - 1] == 0)
+                    SpiralArray(arr, i, j - 1, k);
+    if (j + 1 < arr.GetLength(1))
+        if (arr[i, j + 1] == k - 1)
+            if (j - 1 > 0)
+                if (arr[i, j - 1] == 0)
+                    SpiralArray(arr, i, j - 1, k);
+                else if (arr[i - 1, j] == 0)
+                    SpiralArray(arr, i - 1, j, k);
+    if (i + 1 < arr.GetLength(0))
+        if (arr[i + 1, j] == k - 1)
+            if (i - 1 > 0)
+                if (arr[i - 1, j] == 0)
+                    SpiralArray(arr, i - 1, j, k);
+                else if (arr[i, j + 1] == 0)
+                    SpiralArray(arr, i, j + 1, k);
+}
+
+void Show2DArray (int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            if (array[i, j] < 10)
+                Console.Write("0" + array[i, j] + " ");
+            else
+                Console.Write(array[i, j] + " ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+int[,] newArray = new int[6, 6];
+SpiralArray(newArray, 0, 0, 1);
+Show2DArray(newArray);
