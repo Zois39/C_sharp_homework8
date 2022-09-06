@@ -204,39 +204,25 @@ Show3DArray(CreateRandom3DArray());
 // 11 16 15 06
 // 10 09 08 07
 
+/*
 void SpiralArray(int[,] arr, int i, int j, int k)
 {
+    int max = arr.GetLength(0);
+    if (arr.GetLength(0) < arr.GetLength(1))
+        max = arr.GetLength(1);
+    for (int l = 0; l < max; l++)
+    {
+        for (;j < arr.GetLength(1) - 1 - l; j++, k++)
+            arr[i, j] = k;
+        for (;i < arr.GetLength(0) - 1 - l; i++, k++)
+            arr[i, j] = k;
+        for (;j > 0 + l; j--, k++)
+            arr[i, j] = k;
+        for (;i > 1 + l; i--, k++)
+            arr[i, j] = k;
+    }
     if (arr[i, j] == 0)
-      arr[i, j] = k;
-      k++;
-    if (j - 1 > 0)
-        if (arr[i, j - 1] == k - 1)
-            if (j + 1 < arr.GetLength(1))
-                if (arr[i, j + 1] == 0)
-                    SpiralArray(arr, i, j + 1, k);
-                else if (arr[i + 1, j] == 0)
-                    SpiralArray(arr, i + 1, j, k);
-    if (i - 1 > 0)
-        if (arr[i - 1, j] == k - 1)
-            if (i + 1 < arr.GetLength(0))
-                if (arr[i + 1, j] == 0)
-                    SpiralArray(arr, i + 1, j, k);
-                else if (arr[i, j - 1] == 0)
-                    SpiralArray(arr, i, j - 1, k);
-    if (j + 1 < arr.GetLength(1))
-        if (arr[i, j + 1] == k - 1)
-            if (j - 1 > 0)
-                if (arr[i, j - 1] == 0)
-                    SpiralArray(arr, i, j - 1, k);
-                else if (arr[i - 1, j] == 0)
-                    SpiralArray(arr, i - 1, j, k);
-    if (i + 1 < arr.GetLength(0))
-        if (arr[i + 1, j] == k - 1)
-            if (i - 1 > 0)
-                if (arr[i - 1, j] == 0)
-                    SpiralArray(arr, i - 1, j, k);
-                else if (arr[i, j + 1] == 0)
-                    SpiralArray(arr, i, j + 1, k);
+        arr[i, j] = k;
 }
 
 void Show2DArray (int[,] array)
@@ -252,6 +238,7 @@ void Show2DArray (int[,] array)
     }
     Console.WriteLine();
 }
-int[,] newArray = new int[6, 6];
+int[,] newArray = new int[7, 7];
 SpiralArray(newArray, 0, 0, 1);
 Show2DArray(newArray);
+*/
