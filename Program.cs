@@ -210,7 +210,7 @@ void SpiralArray(int[,] arr, int i, int j, int k)
     int max = arr.GetLength(0);
     if (arr.GetLength(0) < arr.GetLength(1))
         max = arr.GetLength(1);
-    for (int l = 0; l < (max + 1 / 2); l++)
+    for (int l = 0; l < (max + 1) / 2; l++)
     {
         for (;j < arr.GetLength(1) - 1 - l; j++, k++)
             if (arr[i, j] == 0)
@@ -242,7 +242,7 @@ void Show2DArray (int[,] array)
     }
     Console.WriteLine();
 }
-int[,] newArray = new int[8, 5];
+int[,] newArray = new int[7, 7];
 SpiralArray(newArray, 0, 0, 1);
 Show2DArray(newArray);
 */
